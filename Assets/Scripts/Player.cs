@@ -3,12 +3,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Vector3 direction;
-    public float gravity = -9.8;
+    public float gravity = -9.8f;
 
     private float strength= 5f;
 
     private void Update(){
-        if(Input.GetKeyDown(KeyCode.space) || Input.GetMouseButtonDown(0)){
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)){
             direction=Vector3.up * strength;
         }
 
@@ -20,8 +20,11 @@ public class Player : MonoBehaviour
             }
         }
 
-        direction.y += gravity * Time;
+        direction.y += gravity * Time.deltaTime;
+        transform.position += direction * Time.deltaTime;  
+
         
+
 
 
     }
