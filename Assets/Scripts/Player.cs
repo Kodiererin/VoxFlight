@@ -20,7 +20,8 @@ public class Player : MonoBehaviour
             }
         }
 
-        direction.y += gravity * Time
+        direction.y += gravity * Time;
+        
 
 
     }
