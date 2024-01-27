@@ -1,4 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+
 
 public class Player : MonoBehaviour
 {
@@ -52,6 +55,18 @@ public class Player : MonoBehaviour
        }
 
        spriteRenderer.sprite = sprites[spriteIndex];
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Obstacle")
+        {
+
+            FindObjectOfType<GameManager>().GameOver();
+        }else if (other.gameObject.tag == "Scoring")
+        {
+            FindObjectOfType<GameManager>().IncreaseScore();
+        }
     }
 }
  

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1429428311330396303}
+  - component: {fileID: 4155885349304528072}
   m_Layer: 0
   m_Name: Pipes
   m_TagString: Untagged
@@ -34,6 +35,20 @@ Transform:
   - {fileID: 8969862875496589540}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4155885349304528072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325581671523781467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6d1a9db05ea59418da4845b258d220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  leftEdge: 0
 --- !u!1 &4693203420052852098
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,7 +61,7 @@ GameObject:
   - component: {fileID: 306665667009837531}
   m_Layer: 0
   m_Name: Scoring
-  m_TagString: Untagged
+  m_TagString: Scoring
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,7 +139,7 @@ GameObject:
   - component: {fileID: 8998986719422645114}
   m_Layer: 0
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,7 +269,7 @@ GameObject:
   - component: {fileID: 8815524739324940028}
   m_Layer: 0
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
