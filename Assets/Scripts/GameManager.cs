@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
+/// <summary>
+/// GameManager : This class initiates to Play,Pause,GameOver and IncreaseScore.
+/// </summary>
+
 public class GameManager : MonoBehaviour
 {
     public Player player;
@@ -18,7 +22,6 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = 60;
         Pause();
     }
-
     public void Play()
     {
         score = 0;
@@ -35,12 +38,16 @@ public class GameManager : MonoBehaviour
         {
             Destroy(pipes[i].gameObject);
         }
+
+
+        GameLogger.LogAction("Game Started");
     }
 
     public void Pause()
     {
         Time.timeScale = 0f;
         player.enabled = false;
+        GameLogger.LogAction("Game Paused");
     }
 
     public void GameOver()
@@ -48,7 +55,7 @@ public class GameManager : MonoBehaviour
         gameOver.SetActive(true);
         playButton.SetActive(true);
         Pause();
-
+        GameLogger.LogAction("Game Over");
     }
     public void IncreaseScore()
     {
